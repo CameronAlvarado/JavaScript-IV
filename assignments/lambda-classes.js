@@ -65,7 +65,10 @@ const leasterbook = new Instructor({
     age: 37,
     favLanguage: 'Python',
     specialty: 'Front-end',
-    catchPhrase: `Definately not a cop`
+    catchPhrase: `Definately not a cop`,
+    favSubjects: [
+        'Math',
+    ],
 });
 
 const mark = new Instructor({
@@ -74,7 +77,10 @@ const mark = new Instructor({
     age: 50,
     favLanguage: 'C++',
     specialty: 'Mechanical Programming',
-    catchPhrase: `I hate Apple`
+    catchPhrase: `I hate Apple`,
+    favSubjects: [
+        'Political Science', 'Debate', 'Software Engineering'
+    ],
 });
 
 const joe = new Student({
@@ -83,7 +89,10 @@ const joe = new Student({
     age: 27,
     favLanguage: 'MSDOS',
     specialty: 'Retroactive Programming',
-    catchPhrase: `The 80's never died`
+    catchPhrase: `The 80's never ended`,
+    favSubjects: [
+        'Combat Traning',
+    ],
 });
 
 const brandon = new Student({
@@ -92,7 +101,10 @@ const brandon = new Student({
     age: 26,
     favLanguage: 'C++',
     specialty: 'Mechanical Engineering',
-    catchPhrase: `It's a puzzle`
+    catchPhrase: `It's a puzzle`,
+    favSubjects: [
+        'Calculus', 'Mechanical Engineering'
+    ],
 });
 
 const britt = new ProjectManager({
@@ -101,7 +113,10 @@ const britt = new ProjectManager({
     age: 30,
     favLanguage: 'JavaScript',
     specialty: 'Classes',
-    catchPhrase: `I love puns`
+    catchPhrase: `I love puns`,
+    favSubjects: [
+        'Software Engineering', 'Hebrew'
+    ],
 });
 
 const dan = new ProjectManager({
@@ -110,5 +125,8 @@ const dan = new ProjectManager({
     age: 35,
     favLanguage: 'JavaScript',
     specialty: 'Scope',
-    catchPhrase: `I love CHAOS`
+    catchPhrase: `I love CHAOS`,
+    favSubjects: [
+        'Software Engineering',
+    ],
 });

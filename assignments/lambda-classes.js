@@ -57,3 +57,58 @@ class ProjectManager extends Student{
     };
 };
 
+// ------------------------- Objects -----------------------------
+
+const leasterbook = new Instructor({
+    name: 'Mr. LeasterBook',
+    location: 'Black Diamond',
+    age: 37,
+    favLanguage: 'Python',
+    specialty: 'Front-end',
+    catchPhrase: `Definately not a cop`
+});
+
+const mark = new Instructor({
+    name: 'Clark Taylor',
+    location: 'Bellevue',
+    age: 50,
+    favLanguage: 'C++',
+    specialty: 'Mechanical Programming',
+    catchPhrase: `I hate Apple`
+});
+
+const joe = new Student({
+    name: 'Joe DeShoot',
+    location: 'Covington',
+    age: 27,
+    favLanguage: 'MSDOS',
+    specialty: 'Retroactive Programming',
+    catchPhrase: `The 80's never died`
+});
+
+const brandon = new Student({
+    name: 'brandon Lauer',
+    location: 'Vashon Island',
+    age: 26,
+    favLanguage: 'C++',
+    specialty: 'Mechanical Engineering',
+    catchPhrase: `It's a puzzle`
+});
+
+const britt = new ProjectManager({
+    name: 'Britt Flemming',
+    location: 'Israel',
+    age: 30,
+    favLanguage: 'JavaScript',
+    specialty: 'Classes',
+    catchPhrase: `I love puns`
+});
+
+const dan = new ProjectManager({
+    name: 'Lt. Dan',
+    location: 'San Francisco',
+    age: 35,
+    favLanguage: 'JavaScript',
+    specialty: 'Scope',
+    catchPhrase: `I love CHAOS`
+});

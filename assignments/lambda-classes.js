@@ -33,9 +33,10 @@ class Student extends Instructor{
         this.favSubjects = attr.favSubjects;
     };
     listsSubjects() {
-        return (this.favSubjects.forEach(function(element) {
-            console.log(element)
-        }))
+        console.log(this.name + "'s favorite subjects are:");
+        this.favSubjects.forEach((element) => {
+            console.log(element);
+        });
     };
     PRAssignment(subject) {
         return (`${student.name} has begun sprint challenge on ${subject}`)
@@ -61,16 +62,13 @@ class ProjectManager extends Student{
 
 // ------------------------- Objects -----------------------------
 
-const leasterbook = new Instructor({
-    name: 'Mr. LeasterBook',
+const keasterbook = new Instructor({
+    name: 'Mr. KeasterBook',
     location: 'Black Diamond',
     age: 37,
     favLanguage: 'Python',
     specialty: 'Front-end',
     catchPhrase: `Definately not a cop`,
-    favSubjects: [
-        'Math',
-    ],
 });
 
 const mark = new Instructor({
@@ -80,9 +78,6 @@ const mark = new Instructor({
     favLanguage: 'C++',
     specialty: 'Mechanical Programming',
     catchPhrase: `I hate Apple`,
-    favSubjects: [
-        'Political Science', 'Debate', 'Software Engineering'
-    ],
 });
 
 const joe = new Student({
@@ -95,6 +90,8 @@ const joe = new Student({
     favSubjects: [
         'Combat Traning',
     ],
+    previousBackground: 'Army',
+    className: 'Web Development',
 });
 
 const brandon = new Student({
@@ -107,6 +104,8 @@ const brandon = new Student({
     favSubjects: [
         'Calculus', 'Mechanical Engineering'
     ],
+    previousBackground: 'Mechanics',
+    className: 'Web Development',
 });
 
 const britt = new ProjectManager({
@@ -119,6 +118,10 @@ const britt = new ProjectManager({
     favSubjects: [
         'Software Engineering', 'Hebrew'
     ],
+    previousBackground: 'Math Teacher',
+    className: 'Web Development',
+    gradClassName: 'The Hezbhalahs',
+    favInstructor: 'keasterbrook',
 });
 
 const dan = new ProjectManager({
@@ -131,9 +134,15 @@ const dan = new ProjectManager({
     favSubjects: [
         'Software Engineering',
     ],
+    previousBackground: 'Math Teacher',
+    className: 'Web Development',
+    gradClassName: 'The Platoon',
+    favInstructor: 'mark',
 });
 
 console.log(britt.debugsCode(joe, "math"));
 console.log(dan.standUp("WEB22"));
 console.log(brandon.speak());
+console.log(dan.speak());
 console.log(brandon.listsSubjects());
+console.log(dan.debugsCode(brandon, "Web Dev"));

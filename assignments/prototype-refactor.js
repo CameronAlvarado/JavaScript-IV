@@ -80,24 +80,24 @@ class Hero extends Humanoid {
   constructor(attr){
       super(attr);
   };
-  
+}; 
 //   Humanoid.prototype = Object.create(Humanoid.prototype);
   
 //   attack(Villain){
 //     return `${this.name} attacks ${villain.name} for 5 points. ${villain.name} now has ${villain.healthPoints - 5}hp.`
 //   };
-};
+
   // -------------------------------- Villian --------------------------------------
 class Villain extends Humanoid {
   constructor(attr){
-  }
-  
+  };
+}; 
 //   Humanoid.prototype = Object.create(Humanoid.prototype);
   
 //  attack2(Hero){
 //     return `${this.name} attacks ${hero.name} for 3 points. ${hero.name} now has ${hero.healthPoints - 5}hp`
 //   };
-};
+
   // Test you work by un-commenting these 3 objects and the list of console logs below:
   
   

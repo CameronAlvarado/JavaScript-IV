@@ -6,7 +6,7 @@ class Person{
         this.location = attr.location;
     };
     speak() {
-        console.log(`Hello my name is ${this.name}, I am from ${this.location}`);
+        return (`Hello my name is ${this.name}, I am from ${this.location}`);
     };
 };
 
@@ -18,10 +18,10 @@ class Instructor extends Person{
         this.catchPhrase = attr.catchPhrase;
     };
     demo(subject) {
-        console.log(`Today we are learning about ${subject}`)
+        return (`Today we are learning about ${subject}`)
     };
-    grade(student) {
-        console.log(`${student.name} receives a perfect score on ${this.subject}`)
+    grade(student, subject) {
+        return (`${student.name} receives a perfect score on ${subject}`)
     }
 };
 
@@ -33,13 +33,15 @@ class Student extends Instructor{
         this.favSubjects = attr.favSubjects;
     };
     listsSubjects() {
-        console.log(this.favSubjects)
+        return (this.favSubjects.forEach(function(element) {
+            console.log(element)
+        }))
     };
     PRAssignment(subject) {
-        console.log(`${student.name} has begun sprint challenge on ${subject}`)
+        return (`${student.name} has begun sprint challenge on ${subject}`)
     };
     sprintChallenge(subject) {
-        console.log(`${student.name} has begun sprint challenge on ${subject}`)
+        return (`${student.name} has begun sprint challenge on ${subject}`)
     };
 };
 
@@ -49,11 +51,11 @@ class ProjectManager extends Student{
         this.gradClassName = attr.gradClassName;
         this.favInstructor = attr.favInstructor;
     }
-    standUp() {
-        console.log(`${this.name} announces to ${this.channel}, @channel standy times!`)
+    standUp(channel) {
+        return (`${this.name} announces to ${channel}, @${channel} standy times!`)
     };
     debugsCode(student, subject) {
-        console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
+        return (`${this.name} debugs ${student.name}'s code on ${subject}`)
     };
 };
 
@@ -130,3 +132,8 @@ const dan = new ProjectManager({
         'Software Engineering',
     ],
 });
+
+console.log(britt.debugsCode(joe, "math"));
+console.log(dan.standUp("WEB22"));
+console.log(brandon.speak());
+console.log(brandon.listsSubjects());

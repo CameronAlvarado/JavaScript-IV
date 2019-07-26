@@ -33,10 +33,7 @@ class Student extends Instructor{
         this.favSubjects = attr.favSubjects;
     };
     listsSubjects() {
-        console.log(this.name + "'s favorite subjects are:");
-        this.favSubjects.forEach((element) => {
-            console.log(element);
-        });
+        return `${this.name}'s favorite subjects are: \n ${this.favSubjects.join('\n ')}`;
     };
     PRAssignment(subject) {
         return (`${student.name} has begun sprint challenge on ${subject}`)

@@ -57,20 +57,8 @@ class Humanoid extends CharacterStats {
   greet(){
     return `${this.name} offers a greeting in ${this.language}`
   };
-  attack(){
-    let dmg = (Math.floor((Math.random() * 10) + 1));
-    return `${this.name} attacks ${villain.name} for ${dmg} points. ${villain.name} now has ${villain.healthPoints - dmg}hp.`;
-    // if (dmg <= villain.healthPoints) {
-    //     console.log();
-    // };
-  };
-  attack2(){
-    let dmg = (Math.floor((Math.random() * 10) + 1));
-    return `${this.name} attacks ${hero.name} for 3 points. ${hero.name} now has ${hero.healthPoints - dmg}hp`
-  };
 };
    
-  
   /*
     * Inheritance chain: GameObject -> CharacterStats -> Humanoid
     * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
@@ -80,23 +68,22 @@ class Hero extends Humanoid {
   constructor(attr){
       super(attr);
   };
-}; 
-//   Humanoid.prototype = Object.create(Humanoid.prototype);
-  
-//   attack(Villain){
-//     return `${this.name} attacks ${villain.name} for 5 points. ${villain.name} now has ${villain.healthPoints - 5}hp.`
-//   };
-
-  // -------------------------------- Villian --------------------------------------
-class Villain extends Humanoid {
-  constructor(attr){
+  attack(){
+    let dmg = (Math.floor((Math.random() * 10) + 1));
+    return `${this.name} attacks ${villain.name} for ${dmg} points. ${villain.name} now has ${villain.healthPoints - dmg}hp.`;
   };
 }; 
-//   Humanoid.prototype = Object.create(Humanoid.prototype);
-  
-//  attack2(Hero){
-//     return `${this.name} attacks ${hero.name} for 3 points. ${hero.name} now has ${hero.healthPoints - 5}hp`
-//   };
+
+  // -------------------------------- Villian -----------------------------------
+class Villain extends Hero {
+  constructor(attr){
+    super(attr);
+  };
+    attack2(){
+    let dmg = (Math.floor((Math.random() * 10) + 1));
+    return `${this.name} attacks ${hero.name} for 3 points. ${hero.name} now has ${hero.healthPoints - dmg}hp`;
+  };
+}; 
 
   // Test you work by un-commenting these 3 objects and the list of console logs below:
   
@@ -154,7 +141,7 @@ class Villain extends Humanoid {
   
   // -------------------------------- New Objects ------------------------------------------
   
-  const hero = new Humanoid({
+  const hero = new Hero({
     createdAt: new Date(),
     dimensions: {
       length: 1,
@@ -172,7 +159,7 @@ class Villain extends Humanoid {
     language: 'English',
   });
   
-  const villain = new Humanoid({
+  const villain = new Villain({
     createdAt: new Date(),
     dimensions: {
       length: 1,
